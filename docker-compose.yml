@@ -4,6 +4,8 @@ services:
   wso2am:
     build:
       context: ./wso2am
+    volumes:
+      - ./wso2am/conf/deployment.toml:/home/wso2carbon/wso2am-3.2.0/repository/conf/deployment.toml
     ports:
       - "8280:8280"
       - "8243:8243"
